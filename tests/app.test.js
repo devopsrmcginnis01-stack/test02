@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../src/app');
 
-describe('API Endpoints', () => {
+describe('app', () => {
   it('GET / should return welcome message', async () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toBe(200);
