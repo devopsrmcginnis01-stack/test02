@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.7",
     "pkg": "^5.8.0"
   },
   "pkg": {
@@ -23,5 +24,18 @@
       "src/**/*.js"
     ],
     "assets": []
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "publicPath": "./jest-report",
+          "filename": "report.html",
+          "expand": true
+        }
+      ]
+    ]
   }
 }
